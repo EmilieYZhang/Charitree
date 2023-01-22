@@ -30,10 +30,23 @@ body {
   }
 
   #b:hover{
-
       background: white;
       color: darkgreen;
       cursor: pointer;
+  }
+
+  .line-color{
+      color: darkgreen;
+      width: 50px;
+      background: none;
+  }
+
+  .Donnor_list{
+      list-style-type: none;
+      background: none;
+      position: fixed;
+      color: white;
+      top: 5%;
   }
   
   #cash {
