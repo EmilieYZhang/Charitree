@@ -10,18 +10,29 @@ body {
   }
   
   #b {
+    text-align: center;
+    padding-top: 1%;
     position: fixed;
     bottom: 10%;
     right: 50%;
     transform: translate(50%, 0);
-    height: 10%;
-    border-radius:20% ;
+    border-radius:40% ;
     width: 20%;
+    padding-bottom: 1%;
+    background:darkgreen ;
+    color:white;
+    border: 1px solid black;
+    font-size: 1.5vw;
+    font-family: verdana;
+      text-shadow: 1px 1px 1px #919191,
+      1px 25px 35px rgba(16,16,16,0.2),
+      1px 30px 60px rgba(16,16,16,0.4);
   }
 
   #b:hover{
-      background:green ;
-      color: black;
+
+      background: white;
+      color: darkgreen;
       cursor: pointer;
   }
   
