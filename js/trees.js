@@ -158,6 +158,34 @@ function flower2(angles) {
   flower2.rotation.set(angles[0], angles[1], angles[2])
 
   return flower2
+  }
+  
+function marker(angles, numMat) {
+    if (numMat == 1) {
+        var markerMat = new THREE.MeshLambertMaterial({ color: 0x355163 });
+      }
+    else if (numMat == 2) {
+        var markerMat = new THREE.MeshLambertMaterial({ color: 0xE8D2A6 });
+    }
+    else if (numMat == 3) {
+        var markerMat = new THREE.MeshLambertMaterial({ color: 0xFFEA20 });
+    }
+    else if (numMat == 4) {
+        var markerMat = new THREE.MeshLambertMaterial({ color: 0x3D1766 });
+    } 
+    else if (numMat == 5) {
+        var markerMat = new THREE.MeshLambertMaterial({ color: 0xFF0032 });
+    }
+
+    var leavelabel = new THREE.Mesh(cubeGeometry, markerMat );
+    leavelabel.position.set( 0, radius + 6, 0 );
+    leavelabel.scale.set( 1, 0.5, 1 );
+
+    var markerFin = new THREE.Group();
+    markerFin.add( leavelabel )
+    markerFin.rotation.set(angles[0], angles[1], angles[2])
+
+    return markerFin
 }
 
 // Generate a random angle triple from [0, 2PI]
@@ -185,6 +213,31 @@ function growTrees(n) {
   for (var i = 0; i < 15; i++) {
     scene.add(flower2(randomAngleTriple()))
   }
+
+  for (var i = 0; i < 12; i++) {
+
+    scene.add(tree(randomAngleTriple()))
+  }
+  var ang1 = randomAngleTriple()
+  var ang2 = randomAngleTriple()
+  var ang3 = randomAngleTriple()
+  scene.add(tree(ang1))
+  scene.add(marker(ang1, 1))
+  scene.add(tree(ang2))
+  scene.add(marker(ang2, 2))
+  scene.add(tree(ang3))
+  scene.add(marker(ang3, 3))
+
+  for (var i = 0; i < 13; i++) {
+    
+    scene.add(flower(randomAngleTriple()))
+  }
+  var ang4 = randomAngleTriple()
+  var ang5 = randomAngleTriple()
+  scene.add(flower(ang4))
+  scene.add(marker(ang4, 4))
+  scene.add(flower(ang5))
+  scene.add(marker(ang5, 5))
 }
 
 function init() {
