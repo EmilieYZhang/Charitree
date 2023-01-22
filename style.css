@@ -52,27 +52,7 @@ canvas {
     1px 30px 60px rgba(16,16,16,0.4);
 }
 
-a.submit {
-    text-align: center;
-    padding-top: 1%;
-    margin-left: 22%;
-    /* position: fixed; */
-    bottom: 10%;
-    right: 50%;
-    transform: translate(50%, 0);
-<<<<<<< HEAD
-    border-radius:40% ;
-    width: 20%;
-    padding-bottom: 1%;
-    background:darkgreen ;
-    color:white;
-    border: 1px solid black;
-    font-size: 1.5vw;
-    font-family: verdana;
-    text-shadow: 1px 1px 1px #919191,
-    1px 25px 35px rgba(16,16,16,0.2),
-    1px 30px 60px rgba(16,16,16,0.4);
-}
+
 
 #b:hover{
     background: white;
@@ -80,7 +60,7 @@ a.submit {
     cursor: pointer;
 }
 
-#plantbutt {
+a.plantbutt {
     text-align: center;
     padding-top: 1%;
     position: fixed;
@@ -99,7 +79,32 @@ a.submit {
     1px 30px 60px rgba(16,16,16,0.4);
 }
 
-#plantbutt:hover{
+a.plantbutt:hover{
+    background: white;
+    color: darkgreen;
+    cursor: pointer;
+}
+a.submit {
+    text-align: center;
+    padding-top: 1%;
+    /* position: fixed; */
+    margin-left: 22%;
+    bottom: 10%;
+    right: 50%;
+    transform: translate(50%, 0);
+    width: 20%;
+    padding-bottom: 1%;
+    background:darkgreen ;
+    color:white;
+    border: 1px solid black;
+    font-size: 1.5vw;
+    font-family: verdana;
+    text-shadow: 1px 1px 1px #919191,
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+a.submit:hover{
     background: white;
     color: darkgreen;
     cursor: pointer;
@@ -144,11 +149,6 @@ a.submit {
     1px 25px 35px rgba(16,16,16,0.2),
     1px 30px 60px rgba(16,16,16,0.4);
 }
-<<<<<<< HEAD
-/* =======
-    height: 10%; */
-=======
->>>>>>> 6600a71e76177ebbbc17a306c15e3dd30bd3a9c1
   
   
   #cash {
@@ -275,7 +275,7 @@ a.submit {
 	background: #03f484;
 	padding: 10px 20px;
 	cursor: pointer;
-	border-radius: 5px;
+	/* border-radius: 5px; */
 	font-size: 14px;
 }
 .box input[type='submit'] {
@@ -288,7 +288,7 @@ a.submit {
 	background: darkgreen;
 	padding: 10px 20px;
 	cursor: pointer;
-	border-radius: 5px;
+	/* border-radius: 5px; */
 	font-size: 14px;
 }
 a.box {
@@ -301,7 +301,7 @@ a.box {
 	background: darkgreen;
 	padding: 10px 20px;
 	cursor: pointer;
-	border-radius: 5px;
+	/* border-radius: 5px; */
 	font-size: 14px;
     
 }
