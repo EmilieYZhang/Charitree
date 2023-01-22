@@ -1,7 +1,7 @@
 //
-// #TeamTrees Web Version
-// John Fish, Nov 2019
-//
+// #TeamTrees Web Version (Inspiration from John Fish open source project)
+// Contributors: Ayaan, Siar, Vanshree, Emilie
+// ConUHacks VII
 
 // README: generate an API key here: https://wrapapi.com/api/johnfish/teamtrees/treecount/0.0.1
 // it will not update without such a key

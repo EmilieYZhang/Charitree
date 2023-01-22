@@ -1,6 +1,5 @@
 //
-// #TeamTrees Web Version
-// John Fish, Nov 2019
+// User's solar planet consisting of all charity planets they have contributed to
 //
 
 // README: generate an API key here: https://wrapapi.com/api/johnfish/teamtrees/treecount/0.0.1
