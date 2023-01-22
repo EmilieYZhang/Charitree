@@ -9,10 +9,32 @@ canvas {
     height: 100%;
 }
 
-#b {
+a.button {
     text-align: center;
     padding-top: 1%;
     position: fixed;
+    bottom: 10%;
+    right: 50%;
+    transform: translate(50%, 0);
+<<<<<<< HEAD
+    border-radius:40% ;
+    width: 20%;
+    padding-bottom: 1%;
+    background:darkgreen ;
+    color:white;
+    border: 1px solid black;
+    font-size: 1.5vw;
+    font-family: verdana;
+    text-shadow: 1px 1px 1px #919191,
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+a.submit {
+    text-align: center;
+    padding-top: 1%;
+    margin-left: 22%;
+    /* position: fixed; */
     bottom: 10%;
     right: 50%;
     transform: translate(50%, 0);
@@ -75,8 +97,8 @@ canvas {
     1px 25px 35px rgba(16,16,16,0.2),
     1px 30px 60px rgba(16,16,16,0.4);
 }
-=======
-    height: 10%;
+/* =======
+    height: 10%; */
   
   
   #cash {
@@ -104,5 +126,145 @@ canvas {
       1px 25px 35px rgba(16,16,16,0.2),
       1px 30px 60px rgba(16,16,16,0.4);
     }
+
+/**Checkout form**/
+
+.box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 400px;
+	padding: 40px;
+	background: rgba(0,0,0,.4);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.5);
+	border-radius: 10px;
+}
+.box h2 {
+	margin: 0 0 30px;
+	padding: 0;
+	color: #FFF;
+	text-align: center;
+}
+
+.box .inputBox {
+	position: relative;
+}
+.box .inputBox input {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #FFF;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #FFF;
+	outline: none;
+	background: transparent;
+}
+.box .inputBox select {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #FFF;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #FFF;
+	outline: none;
+	background: transparent;
+}
+.box .inputBox option {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #FFF;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #FFF;
+	outline: none;
+	background: rgba(0,0,0,.4);
+}
+.box .inputBox label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #FFF;
+	pointer-events: none;
+	transition: .5s;
+	animation: LabelOnLoad 1s forwards 0s ease;
+}
+@keyframes LabelOnLoad{
+    0%{
+        transform: rotate(0) translateY(-19px);
+        opacity: 0;
+        }
+    100%{
+        transform: rotate(0) translateY(0);
+        opacity: 1;
+        }
+}
+.box .inputBox input:focus ~ label, 
+.box .inputBox input:valid ~ label {
+	top: -19px;
+	left:0;
+	color: #FFF;
+	font-size: 12px;
+}
+.box input[type='label'] {
+	background: transparent;
+	border: none;
+    margin-left: 35%;
+    text-align: center;
+	outline: none;
+	color: #FFF;
+	background: #03f484;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 14px;
+}
+.box input[type='submit'] {
+	background: transparent;
+	border: none;
+    margin-left: 35%;
+    text-align: center;
+	outline: none;
+	color: #FFF;
+	background: darkgreen;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 14px;
+}
+a.box {
+	background: transparent;
+	border: none;
+    margin-left: 35%;
+    text-align: center;
+	outline: none;
+	color: #FFF;
+	background: darkgreen;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 14px;
+    
+}
+.box input[type='submit']:hover {
+	background-color: rgba(14, 243, 37, 0.7);
+}
+.box input[type='label']:hover {
+	background-color: rgba(3, 244, 172, 0.7);
+}
+@media(max-width: 720px){
+	.box {
+		width: 80%;
+	}
+}
 
   
