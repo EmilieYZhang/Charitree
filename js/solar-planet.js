@@ -42,7 +42,7 @@ function fetchTrees() {
       if (data.success) {
         numTrees = data["data"]["#totalTrees"]; 
       }
-      $("#cash").text("$"+formatNumber(numTrees))
+      $("#cash").text("User's Solar System")
       var diff = Math.floor(numTrees) - curTrees
       if (diff > 0) {
         curTrees += diff
