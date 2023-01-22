@@ -16,6 +16,7 @@ var scene,
 
 // Tracking tree count
 var numTrees = 10000;
+var finalTrees = 1000000
 var curTrees = 0;
 
 // Leaf materials
@@ -32,10 +33,10 @@ var fCubeGeometry = new THREE.SphereGeometry(1, 1, 1);
 var temp = new THREE.BoxGeometry(1, 1, 1, 7, 0.2)
 
 var thirdDarkMaterial = new THREE.MeshLambertMaterial({ color: 0xE5806E });
-var thirdLightMaterial = new THREE.MeshLambertMaterial({ color: 0xCC4027 });
+var thirdLightMaterial = new THREE.MeshLambertMaterial({ color: 0xA865C9 });
 var thirdStemMaterial = new THREE.MeshLambertMaterial({ color: 0x7D5A4F });
 var thirdBulbMaterial = new THREE.MeshLambertMaterial({ color: 0xFBEC5D });
-var thirdCubeGeometry = new THREE.SphereGeometry(1, 1, 1);
+var thirdCubeGeometry = new THREE.BoxGeometry(1, 1, 1);
 
 var radius = 35; // Planet radius
 
@@ -56,7 +57,7 @@ function fetchTrees() {
       if (data.success) {
         numTrees = data["data"]["#totalTrees"]; 
       }
-      $("#cash").text("$"+formatNumber(numTrees))
+      $("#cash").text("Charity A - $"+formatNumber(numTrees)+" out of $" + formatNumber(finalTrees))
       var diff = Math.floor(numTrees / 10000) - curTrees
       if (diff > 0) {
         curTrees += diff
@@ -132,6 +133,33 @@ function flower(angles) {
   return flower
 }
 
+// Generate a simple tree, rotated with provided angles
+function flower2(angles) {
+  var stem = new THREE.Mesh(thirdCubeGeometry, thirdStemMaterial );
+  stem.position.set(0, radius + 0.75, 0 );
+  stem.scale.set( 1.3, 2.5, 1.3 );
+
+  var bulb = new THREE.Mesh(thirdCubeGeometry, thirdBulbMaterial );
+  bulb.position.set(0, radius + 2.4, 0 );
+  bulb.scale.set( 0.8, 0.8, 0.8 );
+
+  var flower2Dark = new THREE.Mesh(thirdCubeGeometry, thirdStemMaterial );
+  
+  var flower2Light = new THREE.Mesh(thirdCubeGeometry, thirdLightMaterial );
+  flower2Light.position.set( 0, radius + 1.9, 0 );
+  flower2Light.scale.set( 2.4, 1.5, 2.4 );
+
+  var flower2 = new THREE.Group();
+  // flower.add( flowerDark );
+  flower2.add(bulb);
+  flower2.add( flower2Light );
+  flower2.add( stem );
+
+  flower2.rotation.set(angles[0], angles[1], angles[2])
+
+  return flower2
+  }
+  
 function marker(angles, numMat) {
     if (numMat == 1) {
         var markerMat = new THREE.MeshLambertMaterial({ color: 0x355163 });
@@ -174,6 +202,17 @@ function growTrees(n) {
 
   // vanshree - add only 10 trees to planet
   // for (var i = 0; i < n; i++) {
+  for (var i = 0; i < 15; i++) {
+    scene.add(tree(randomAngleTriple()))
+  }
+
+  for (var i = 0; i < 15; i++) {
+    scene.add(flower(randomAngleTriple()))
+  }
+
+  for (var i = 0; i < 15; i++) {
+    scene.add(flower2(randomAngleTriple()))
+  }
 
   for (var i = 0; i < 12; i++) {
 
