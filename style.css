@@ -270,6 +270,7 @@ a.submit:hover{
 	border: none;
     margin-left: 35%;
     text-align: center;
+    font-size: large;
 	outline: none;
 	color: #FFF;
 	background: #03f484;
@@ -286,7 +287,7 @@ a.submit:hover{
 	outline: none;
 	color: #FFF;
 	background: darkgreen;
-	padding: 10px 20px;
+	/* padding: 10px 20px; */
 	cursor: pointer;
 	/* border-radius: 5px; */
 	font-size: 14px;
@@ -294,16 +295,21 @@ a.submit:hover{
 a.box {
 	background: transparent;
 	border: none;
-    margin-left: 35%;
+    /* margin-left: 35%; */
     text-align: center;
+    font-size: large;
 	outline: none;
 	color: #FFF;
 	background: darkgreen;
-	padding: 10px 20px;
+	padding: 10px 10px;
 	cursor: pointer;
 	/* border-radius: 5px; */
 	font-size: 14px;
+    margin-top: 45%;
     
+}
+a.box:hover{
+    background-color: #0f9959c7;
 }
 .box input[type='submit']:hover {
 	background-color: rgba(14, 243, 37, 0.7);
